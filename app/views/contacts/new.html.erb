@@ -1,0 +1,10 @@
+<html>
+    <h1> Novo Contato </h1>
+
+    <%= simple_form_for @contact do |f| %>
+        <%= f.input :name %>
+        <%= f.input :birthdate%>
+
+        <%= f.button :submit%>
+    <% end %>
+</html>

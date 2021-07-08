@@ -1,4 +1,10 @@
 <html>
     <h1>Contato!</h1>
-    <%= @contacts.to_a %>
+
+    <%= link_to 'Adicionar Contato', new_contact_path %>
+    
+    <% @contacts.each do | contact | %>
+       <h4><%= link_to contact.name, edit_contact_path(id: contact.id) %></h4>
+    <% end %>
+
 </html>
